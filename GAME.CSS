@@ -1,0 +1,113 @@
+/* 🎮 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🎯 Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+  letter-spacing: 2px;
+}
+
+/* 🪨📄✂ Choices Section */
+.choices {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.choice {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+}
+
+.choice img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* 🏆 Scoreboard */
+.score_board {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 30px 0;
+}
+
+.score {
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  padding: 20px 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.score p {
+  font-size: 1.5rem;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+#user-score {
+  font-size: 2.5rem;
+  color: #00ffcc;
+}
+
+#com-score {
+  font-size: 2.5rem;
+  color: #ff5050;
+}
+
+/* 📢 Message Box */
+.msg-container {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+  animation: pulse 2s infinite;
+}
+
+#msg {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* 🔥 Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
